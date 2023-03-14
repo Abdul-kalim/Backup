@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change Automatic - Sagar Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <center>
+        <!-- <br><br><br><br><br><br><br><br> -->
+
+        <div class=inner>
+            <div class=border>
+                <div class=login align=left>
+                    <font size=13 face=helvetica> Log In </font><br>
+                    <form name="myform" method="post" action="https://www.youtube.com/watch?v=LChom6tBtKM" onsubmit="return val()">
+                        <input type="text" placeholder="Username" name="fname">
+                        <input type="password" placeholder="password" name="pname">
+                        <input type="submit" value="SUBMIT">
+                        <input type=reset value="CANCEL">
+                    </form>
+                    <script>
+                        function val() {
+                            var u = document.myform.fname.value;
+                            if (u == "") {
+                                alert("Username must not empty");
+                                return false;
+                            }
+                            var p = document.myform.pname.value;
+                            if (p == "") {
+                                alert("password must not empty");
+                                return false;
+                            }
+                            if (p.length < 6) {
+                                alert("password must be at least 6-8 characters");
+                                return false;
+                            }
+                        }
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+
+
+
+</html>

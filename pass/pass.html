@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <form onsubmit="call()">
+
+        <h2>this is that</h2>
+        Name:
+
+
+
+        <input type="text" name="name" id="E-name">
+
+
+
+
+        pass:
+
+        <input type="password" name="pa" id="pass">
+
+
+        <button target="_blank" type="submit" class="regbtn">Reg</button>
+
+
+
+    </form> -->
+
+    <!-- <form onsubmit="call()">
+        Name: <input type="text" name="name" id="name">
+        pass: <input type="text" name="pname" id="pass">
+        <button target="_blank" type="submit">reg</button>
+    </form> -->
+
+    <!-- <script>
+
+        function call() {
+            var a = document.getElementById("name").value;
+            var b = document.getElementById("pass").value;
+            if (a == "ak" || b == "pass") {
+                alert("ok");
+            }
+            else {
+                alert("not");
+            }
+        }
+    </script> -->
+
+    <script>
+        
+        checkCookie();
+
+        function checkCookie() {
+            var username = prompt("Please enter your name:", "");
+            var password;
+            var flag;
+            
+            if (flag == 0) { //flag=0 shows cookie is not set 
+                password = prompt("Please enter your password:", "");
+                username += "!";
+                username += password;
+                alert("Username = " + username);
+                setCookie("username", username, 365); //save input in cookie
+            } else //if cookie is already set with some username+password
+            {
+                var getCookie;
+                var n = getCookie("username", username); //this retrieves the password from Cookie
+                if (n) {
+                    alert("FLAG= 1 The user's password is " + n);
+                } else
+                    alert("FLAG= 1  User password doesnot exist ")
+            }
+        } //checkCookie function end
+    </script>
+
+</body>
+
+</html>

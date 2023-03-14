@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Change Automatic - Sagar Developer</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+
+<body>
+    <center>
+        <!-- <br><br><br><br><br><br><br><br> -->
+
+        <div class=inner>
+            <div class=border>
+                <div class=login align=left>
+                    <font size=13 face=helvetica> Log In </font><br>
+                    <form name="myform" method="post" action="home.html" onsubmit="return val()">
+                        <input type="text" placeholder="Username" name="fname" id="u-name">
+                        <input type="password" placeholder="password" name="pname" id="p-name">
+                        <input type="submit" value="SUBMIT">
+                        <input type=reset value="CANCEL">
+                        <h2>If you don't have an account? <a href="Signup.html">click hear</a></h2>
+                    </form>
+                    <script>
+                        function val() {
+                            var u = document.myform.fname.value;
+                            var p = document.myform.pname.value;
+                            var a = document.getElementById("u-name").value;
+                            var b = document.getElementById("p-name").value;
+
+
+                            if (u == "") {
+                                alert("Username must not empty");
+                                return false;
+                            }
+
+                            else if (p == "") {
+                                alert("password must not empty");
+                                return false;
+                            }
+                            else if (p.length < 6) {
+                                alert("password must be at least 6-8 characters");
+                                return false;
+                            }
+                            else if (a == "ak" && b == "password") {
+                                // alert("ok");
+                                return true;
+                            }
+                            else if (a != "ak") {
+                                alert("Username is not correct");
+                                return false;
+                            }
+                            else if (b != "password") {
+                                alert("password is not correct");
+                                return false;
+                            }
+                            else {
+                                alert("Please enter correct info");
+                                return false;
+                            }
+
+                        }
+
+
+                    </script>
+                </div>
+            </div>
+        </div>
+    </center>
+</body>
+
+
+
+
+</html>
